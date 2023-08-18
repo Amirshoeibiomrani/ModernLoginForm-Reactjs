@@ -1,4 +1,4 @@
-const validate = data => {
+export const validate = data => {
     const errors = {};
 
     if (!data.name.trim()) {
@@ -25,10 +25,11 @@ const validate = data => {
 
     if (!data.confirmPassword) {
         errors.confirmPassword = "Confirm the password"
-    } else if (data.confirmPassword !== password) {
+    } else if (data.confirmPassword !== data.password) {
         errors.confirmPassword = "Password do not match "
     } else {
         delete errors.confirmPassword
+        {errors.name && <span>{errors.name}</span>}
     }
 
     if (data.isAccepted) {
