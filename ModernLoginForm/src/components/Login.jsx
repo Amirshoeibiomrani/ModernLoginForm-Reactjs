@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { validate } from './validate';
+import { Link } from 'react-router-dom';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -72,7 +73,7 @@ const submitHandler = event => {
         </div>
          
         <div className={styles.formButtons}>
-          <a href="#">Sign Up</a>
+          <Link to="/signup">Sign Up</Link>
           <button type="submit">Login</button>
         </div>
       </form>
